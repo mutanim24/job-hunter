@@ -26,7 +26,7 @@ const Header = () => {
                     <NavLink className={({isActive}) => isActive ? 'text-cyan-500': ''} to="/blog">Blog</NavLink>
                 </li>
             </ul>
-            <button  className='text-white text-xl rounded bg-gradient-to-r from-cyan-600 to-purple-500 p-1 px-2'>Star Applying</button>
+            <button  className='text-white text-xl rounded bg-gradient-to-r from-cyan-600 to-purple-500 p-1 px-3'>Star Applying</button>
         </div>
     );
 };
