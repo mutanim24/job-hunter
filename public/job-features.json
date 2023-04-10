@@ -1,0 +1,117 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "company_logo": "../src/assets/All Images/google-1-1 1.png",
+            "job_title": "Software Engineer",
+            "company_name": "Google",
+            "remote_or_onsite": "Remote",
+            "location": "Anywhere",
+            "fulltime_or_parttime": "Fulltime",
+            "salary": "$100,000 - $120,000",
+            "job_description": "We are looking for a highly skilled software engineer to join our team and help us build and maintain complex software systems.",
+            "job_responsibility": "Design, develop, test, and deploy software applications and systems. Work collaboratively with cross-functional teams to identify and solve complex problems. Write clean, efficient, and well-documented code. Continuously learn and stay up-to-date with emerging technologies and best practices.",
+            "educational_requirements": "Bachelor's or Master's degree in Computer Science, Computer Engineering, or related field.",
+            "experiences": "3+ years of experience in software development.",
+            "contact_information": {
+                "phone": "555-555-5555",
+                "email": "jobs@example.com"
+            }
+        },
+        {
+            "id": 2,
+            "company_logo": "../src/assets/All Images/amazon.png",
+            "job_title": "Marketing Manager",
+            "company_name": "Amazone",
+            "remote_or_onsite": "Onsite",
+            "location": "New York City",
+            "fulltime_or_parttime": "Fulltime",
+            "salary": "$80,000 - $100,000",
+            "job_description": "We are seeking a talented and experienced Marketing Manager to lead our marketing team and drive our brand awareness and customer acquisition efforts.",
+            "job_responsibility": "Develop and execute marketing strategies and campaigns to achieve business goals. Lead and manage a team of marketers and designers. Analyze and report on marketing performance metrics. Collaborate with cross-functional teams to ensure brand consistency and alignment.",
+            "educational_requirements": "Bachelor's or Master's degree in Marketing, Communications, or related field.",
+            "experiences": "5+ years of experience in marketing, with at least 2 years in a management role.",
+            "contact_information": {
+                "phone": "555-555-5555",
+                "email": "jobs@example.com"
+            }
+        },
+        {
+            "id": 3,
+            "company_logo": "../src/assets/All Images/microsoft.png",
+            "job_title": "Sales Representative",
+            "company_name": "Microsoft",
+            "remote_or_onsite": "Remote",
+            "location": "Anywhere",
+            "fulltime_or_parttime": "Fulltime",
+            "salary": "$60,000 - $80,000",
+            "job_description": "We are looking for a talented and motivated sales representative to join our team and help us expand our customer base.",
+            "job_responsibility": "Prospect and qualify new leads. Build and maintain relationships with customers. Meet and exceed sales quotas. Collaborate with cross-functional teams to ensure customer satisfaction and retention.",
+            "educational_requirements": "Bachelor's degree in Business Administration, Sales, or related field.",
+            "experiences": "2+ years of experience in sales.",
+            "contact_information": {
+                "phone": "555-555-5555",
+                "email": "jobs@example.com"
+            }
+        },
+        {
+            "id": 4,
+            "company_logo": "../src/assets/All Images/netflix-4 1.png",
+            "job_title": "Data Analyst",
+            "company_name": "Netflix",
+            "remote_or_onsite": "Onsite",
+            "location": "San Francisco",
+            "fulltime_or_parttime": "Fulltime",
+            "salary": "$80,000 - $100,000",
+            "job_description": "We are seeking a data analyst to help us analyze and interpret large datasets and make data-driven business decisions.",
+            "job_responsibility": "Analyze and interpret large datasets to extract insights and identify trends. Design and maintain data models and databases. Develop and automate data reports and visualizations. Collaborate with cross-functional teams to support business decision-making.",
+            "educational_requirements": "Bachelor's or Master's degree in Statistics, Mathematics, Computer Science, or related field.",
+            "experiences": "3+ years of experience in data analysis or related field.",
+            "contact_information": {
+                "phone": "555-555-5555",
+                "email": "jobs@example.com"
+            }
+        },
+        {
+            "id": 5,
+            "company_logo": "../src/assets/All Images/tesla-9 1.png",
+            "job_title": "Customer Service Representative",
+            "company_name": "Tesla",
+            "remote_or_onsite": "Onsite",
+            "location": "Los Angeles",
+            "fulltime_or_parttime": "Part-time",
+            "salary": "$20 - $25 per hour",
+            "job_description": "We are looking for a customer service representative to provide excellent service and support to our customers.",
+            "job_responsibility": "Answer customer inquiries and resolve issues via phone, email, or chat. Maintain accurate records of customer interactions and transactions. Collaborate with cross-functional teams to ensure customer satisfaction and retention.",
+            "educational_requirements": "High school diploma or equivalent.",
+            "experiences": "1+ year of experience in customer service.",
+            "contact_information": {
+                "phone": "555-555-5555",
+                "email": "jobs@example.com"
+            }
+        },
+            {
+                "id": 6,
+                "company_logo": "../src/assets/All Images/Group 10021.png",
+                "job_title": "Customer Service Representative",
+                "company_name": "Airbnb",
+                "remote_or_onsite": "Onsite",
+                "location": "Los Angeles",
+                "fulltime_or_parttime": "Part-time",
+                "salary": "$20 - $25 per hour",
+                "job_description": "We are looking for a customer service representative to provide excellent service and support to our customers.",
+                "job_responsibility": "Answer customer inquiries and resolve issues via phone, email, or chat. Maintain accurate records of customer interactions and transactions. Collaborate with cross-functional teams to ensure customer satisfaction and retention.",
+                "educational_requirements": "High school diploma or equivalent.",
+                "experiences": "1+ year of experience in customer service.",
+                "contact_information": {
+                    "phone": "555-555-5555",
+                    "email": "jobs@example.com"
+                }
+            }
+        ]
+    }
+    
+    
+    
+    
+    
