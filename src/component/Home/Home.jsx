@@ -6,6 +6,7 @@ import JobFeature from '../JobFeature/JobFeature';
 const Home = () => {
     const [categories, setCategories] = useState([]);
     const [jobFeatures, setJobFeatures] = useState([])
+    const [seeJob, setSeeJob] = useState(false);
     useEffect(() => {
         fetch("category.json")
             .then(res => res.json())
@@ -13,11 +14,11 @@ const Home = () => {
     }, [])
     useEffect(() => {
         fetch("job-features.json")
-        .then(res => res.json())
-        .then(data => setJobFeatures(data.jobs))
+            .then(res => res.json())
+            .then(data => setJobFeatures(data.jobs))
     }, [])
     return (
-        <div className='mx-12'>
+        <div className='mx-20'>
             <div>
                 <Banner></Banner>
             </div>
@@ -36,12 +37,18 @@ const Home = () => {
             <div className='text-center'>
                 <h1 className='text-5xl font-semibold'>Featured Jobs</h1>
                 <p className='my-9'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div className='grid grid-cols-2 gap-6'>
+                <div className='grid grid-cols-2 gap-6 mb-8'>
                     {
-                        jobFeatures.map(feature => <JobFeature
+                        jobFeatures.slice(0, seeJob ? 6 : 4).map(feature => <JobFeature
                             key={feature.id}
                             feature={feature}
                         ></JobFeature>)
+                    }
+
+                </div>
+                <div>
+                    {
+                        !seeJob && <button onClick={() => setSeeJob(true)} className='bg-cyan-600 text-white p-1 px-2 rounded my-8'>See All Job</button>
                     }
                 </div>
             </div>
