@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 const JobFeature = ({feature}) => {
     const {company_logo, job_title, company_name, remote_or_onsite, location, fulltime_or_parttime, salary, id, job_description, job_responsibility, educational_requirements} = feature;
     return (
-        <div className='feature p-5 border rounded'>
+        <div className='feature p-6 border rounded'>
             <img src={company_logo} alt="" />
             <h1 className='text-2xl font-semibold mt-5'>{job_title}</h1>
-            <h4 className='mb-3'>{company_name}</h4>
+            <h4 className='my-3'>{company_name}</h4>
             <div className='flex text-cyan-600'>
                 <p className='rounded border border-2 border-cyan-600 p-1 px-3 me-3'>{remote_or_onsite}</p>
                 <p className='rounded border border-2 border-cyan-600 p-1 px-3'>{fulltime_or_parttime}</p>

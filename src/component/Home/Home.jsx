@@ -6,7 +6,7 @@ import JobFeature from '../JobFeature/JobFeature';
 const Home = () => {
     const [categories, setCategories] = useState([]);
     const [jobFeatures, setJobFeatures] = useState([])
-    const [seeJob, setSeeJob] = useState(false);
+    const [seeAllJob, setSeeAllJob] = useState(false);
     useEffect(() => {
         fetch("category.json")
             .then(res => res.json())
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
                 <div className='grid grid-cols-2 gap-6 mb-6'>
                     {
-                        jobFeatures.slice(0, seeJob ? 6 : 4).map(feature => <JobFeature
+                        jobFeatures.slice(0, seeAllJob ? 6 : 4).map(feature => <JobFeature
                             key={feature.id}
                             feature={feature}
                         ></JobFeature>)
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     {
-                        !seeJob && <button onClick={() => setSeeJob(true)} className='bg-cyan-600 text-white p-1 px-2 rounded my-8'>See All Job</button>
+                        !seeAllJob && <button onClick={() => setSeeAllJob(true)} className='bg-cyan-600 text-white p-1 px-2 rounded my-8'>See All Job</button>
                     }
                 </div>
             </div>
