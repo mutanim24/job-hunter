@@ -3,8 +3,8 @@ import "./JobFeature.css"
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
-const JobFeature = ({feature, handleViewDetails}) => {
-    const {company_logo, job_title, company_name, remote_or_onsite, location, fulltime_or_parttime, salary, id, job_description, job_responsibility, educational_requirements} = feature;
+const JobFeature = ({ feature, handleViewDetails }) => {
+    const { company_logo, job_title, company_name, remote_or_onsite, location, fulltime_or_parttime, salary, id, job_description, job_responsibility, educational_requirements } = feature;
     return (
         <div className='feature p-6 border rounded text-center md:text-left'>
             <img className='mx-auto md:mx-0' src={company_logo} alt="" />

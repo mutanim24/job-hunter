@@ -1,13 +1,14 @@
 import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 
 
 const AppliedJobDetails = ({ job }) => {
-    const { company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, salary, location } = job;
+    const { company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, salary, location, id } = job;
     return (
         <div className='mx-20'>
-            <div className='grid grid-cols-4 border p-8 rounded my-5'>
+            <div className='grid grid-cols-4 gap-6 border p-8 rounded my-5'>
                 <img className='m-auto bg-gray-50' src={company_logo} alt="" />
                 <div className='col-span-2 space-y-3'>
                     <h2 className='text-2xl font-semibold'>{job_title}</h2>
@@ -22,7 +23,7 @@ const AppliedJobDetails = ({ job }) => {
                     </div>
                 </div>
                 <div className='m-auto'>
-                    <button className='bg-cyan-600 text-white p-2 px-3 rounded'>View Details</button>
+                    <Link to={`/jobdetails/${id}`}><button className='bg-cyan-600 text-white p-2 px-3 rounded'>View Details</button></Link>
                 </div>
             </div>
         </div>

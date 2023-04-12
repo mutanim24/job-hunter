@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./JobDetails.css"
 import { useLoaderData, useParams } from 'react-router-dom';
 import { CurrencyDollarIcon, MapPinIcon, PhoneIcon, EnvelopeIcon, BriefcaseIcon } from '@heroicons/react/24/solid'
-import { addToDb } from '../../Utilities/fakeDB';
+import Banner1 from "../../assets/All Images/Vector-1.png"
+import Banner from "../../assets/All Images/Vector.png"
 
 
 const JobDetails = () => {
@@ -17,25 +18,25 @@ const JobDetails = () => {
     // console.log(data);
 
 
-    const handleApplied = (feature) => {
+    const handleApplied = (data) => {
         const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
-
         // Check if the job already exists in localStorage
-        const jobExists = jobs.some((job) => job.id === data.id);
-
+        const jobExists = jobs.some((job) => job.id === data.id);np
         if (!jobExists) {
             jobs.push(data);
             localStorage.setItem("jobs", JSON.stringify(jobs));
         }
     }
-    
+
     return (
         <div className='mx-20'>
-            <div className='header-bg'>
-                <h1 className='text-4xl font-bold text-center p-4 md:p-9'>Job Details</h1>
+            <div className='w-full flex justify-between items-center mb-8'>
+                <img src={Banner} className='' />
+                <h1 className='text-[32px] font-bold'>Job Details</h1>
+                <img src={Banner1} className='' />
             </div>
             <div className="grid grid-cols-3 gap-4">
-                <div className='col-span-2 space-y-4'>
+                <div className='col-span-2 space-y-4 p-4'>
                     <p><span className='font-bold'>Job Description: </span>{job_description}</p>
                     <p><span className='font-bold'>Job Responsibility: </span>{job_responsibility}</p>
                     <p><span className='font-bold'>Educational Requirements: </span><br />{educational_requirements}</p>

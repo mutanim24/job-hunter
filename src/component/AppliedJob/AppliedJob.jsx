@@ -1,50 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import backgroundBanner from "../../assets/All Images/Vector-1.png"
-import { getShoppingCart } from '../../Utilities/fakeDB';
-import { useLoaderData } from 'react-router-dom';
 import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails';
-import Banner1 from "../../assets/All Images/Vector-1.png"
-import Banner from "../../assets/All Images/Vector.png"
+import Banner1 from "../../assets/All Images/Vector-1.png";
+import Banner from "../../assets/All Images/Vector.png";
 
 const AppliedJob = () => {
-    // step 1
-    // const [jobFeatures, setJobFeatures] = useState([]);
-    // useEffect(() => {
-    //     fetch("job-features.json")
-    //         .then(res => res.json())
-    //         .then(data => setJobFeatures(data.jobs))
-    // }, []);
-
-    // const storedJob = getShoppingCart();
-    // for(const id in storedJob){
-    //     const storedJobDetails = jobFeatures.find(job => job.id === id)
-    //     console.log(storedJobDetails)
-    // }
-
-    // step 2
-    // const getAllJob = useLoaderData();
-    // const allJob = getAllJob.jobs;
-    // console.log(allJob)
-
-    // step 3
-    // const savedAppliedJob = useLoaderData();
-    // const [appliedJobArray, setAppliedJobArray] = useState(savedAppliedJob)
-    // console.log(savedAppliedJob);
-
-    // const [jobs, setJobs] = useState([]);
-    // useEffect(() => {
-    //     const jobsData = JSON.parse(localStorage.getItem("jobs")) || [];
-    //     setJobs(jobsData);
-    // }, []);
-
-    const [selectedButton, setSelectedButton] = useState(null);
+    // const [selectedButton, setSelectedButton] = useState(null);
     const [jobs, setJobs] = useState([]);
+    const [filteredJobs, setFilteredJobs] = useState(jobs);
+    const [selectedFilter, setSelectedFilter] = useState("All");
 
     useEffect(() => {
         const jobsData = JSON.parse(localStorage.getItem("jobs")) || [];
         setJobs(jobsData);
+        setFilteredJobs(jobsData); // set all jobs as default filtered jobs
     }, []);
-    
+
+    const handleRemote = () => {
+        const remoteJob = jobs.filter(jb => jb.remote_or_onsite === "Remote");
+        setFilteredJobs(remoteJob);
+        setSelectedFilter("Remote"); // update selected filter state
+    }
+
+    const handleOnsite = () => {
+        const onsiteJob = jobs.filter(jb => jb.remote_or_onsite === "Onsite");
+        setFilteredJobs(onsiteJob);
+        setSelectedFilter("Onsite"); // update selected filter state
+    }
+
+    const handleAll = () => {
+        setFilteredJobs(jobs);
+        setSelectedFilter("All"); // update selected filter state
+    }
+
     return (
         <div className=''>
             <div className='w-full flex justify-between items-center mb-8'>
@@ -53,17 +40,19 @@ const AppliedJob = () => {
                 <img src={Banner1} className='' />
             </div>
             <div className='my-10'>
-                <div>
-                    <button className='bg-cyan-600 p-2 px-3'>Remote</button>
+                <div className='text-center space-x-4'>
+                    <button onClick={handleAll} className='bg-cyan-600 p-2 px-3 text-white font-semibold rounded text-center'>All</button>
+                    <button onClick={handleRemote} className='bg-cyan-600 p-2 px-3 text-white font-semibold rounded text-center'>Remote</button>
+                    <button onClick={handleOnsite} className='bg-cyan-600 p-2 px-3 text-white font-semibold rounded text-center'>Onsite</button>
                 </div>
                 {
-                    jobs.map(job => <AppliedJobDetails
+                    filteredJobs.map(job => <AppliedJobDetails
                         key={job.key}
                         job={job}
                     ></AppliedJobDetails>)
                 }
                 {
-                    jobs.length < 1 ? <h2 className='p-28 text-4xl text-center font-bold'>Not Job Applied Yet!!</h2> : ""
+                    jobs.length < 1 ? <h2 className='p-28 text-2xl text-center font-semibold'>Not Job Applied Yet!!</h2> : ""
                 }
             </div>
         </div>
