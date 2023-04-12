@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./JobDetails.css"
 import { useLoaderData, useParams } from 'react-router-dom';
 import { CurrencyDollarIcon, MapPinIcon, PhoneIcon, EnvelopeIcon, BriefcaseIcon } from '@heroicons/react/24/solid'
 import { addToDb } from '../../Utilities/fakeDB';
@@ -16,15 +17,21 @@ const JobDetails = () => {
     // console.log(data);
 
 
-    const handleApplied = feature => {
-        // const newApplied = [features, ...addedApplied];
-        // setAddedApplied(newApplied);
-        addToDb(feature.id);
-        // console.log(feature.id)
+    const handleApplied = (feature) => {
+        const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+        // Check if the job already exists in localStorage
+        const jobExists = jobs.some((job) => job.id === data.id);
+
+        if (!jobExists) {
+            jobs.push(data);
+            localStorage.setItem("jobs", JSON.stringify(jobs));
+        }
     }
+    
     return (
         <div className='mx-20'>
-            <div>
+            <div className='header-bg'>
                 <h1 className='text-4xl font-bold text-center p-4 md:p-9'>Job Details</h1>
             </div>
             <div className="grid grid-cols-3 gap-4">

@@ -1,0 +1,7 @@
+.header-bg{
+    background-image: url('../../assets/All Images/Vector.png'), url('../../assets/All Images/Vector-1.png');
+    background-position: bottom-left, top-right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50%, 50%;
+    height: 200px;
+  }
