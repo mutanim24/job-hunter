@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails';
-import Banner1 from "../../assets/All Images/Vector-1.png";
-import Banner from "../../assets/All Images/Vector.png";
+import Banner1 from "../../../public/assets/All Images/Vector-1.png";
+import Banner from "../../../public/assets/All Images/Vector.png";
 
 const AppliedJob = () => {
     // const [selectedButton, setSelectedButton] = useState(null);
     const [jobs, setJobs] = useState([]);
-    const [filteredJobs, setFilteredJobs] = useState(jobs);
+    const [filteredJobs, setFilteredJobs] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState("All");
 
     useEffect(() => {

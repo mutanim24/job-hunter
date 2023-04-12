@@ -1,16 +1,23 @@
 import React from 'react';
-import bannerImg from '../../assets/All Images/P3OLGJ1 copy 1.png'
+import bannerImg from '../../../public/assets/All Images/P3OLGJ1 copy 1.png'
 
 const Banner = () => {
     return (
-        <div className='banner flex items-center'>
-            <div className='text-center md:text-left w-6/12'>
-                <h1 className='text-5xl md:text-7xl font-bold'>One Step <br /> Closer To Your <br /><span className='text-cyan-500'>Dream Job </span></h1>
-                <p className='my-5 me-12'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
-                <button className='text-white text-xl rounded bg-gradient-to-r from-cyan-600 to-purple-500 p-1 px-3'>Get Start</button>
+        <div class="banner flex flex-col md:flex-row items-center">
+            <div class="text-center md:text-left md:w-6/12">
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8">
+                    One Step Closer To Your <br class="hidden lg:block" /><span class="text-cyan-500">Dream Job</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg mb-8 md:mb-12">
+                    Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
+                </p>
+                <button class="text-white text-lg rounded-lg bg-gradient-to-r from-cyan-600 to-purple-500 p-2 px-4">
+                    Get Started
+                </button>
             </div>
-            <img className='w-6/12' src={bannerImg} alt="" />
+            <img class="w-full md:w-6/12" src={bannerImg} alt="" />
         </div>
+
     );
 };
 

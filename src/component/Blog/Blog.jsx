@@ -1,7 +1,6 @@
 import React from 'react';
-import backgroundBanner from "../../assets/All Images/Vector.png";
-import Banner1 from "../../assets/All Images/Vector-1.png";
-import Banner from "../../assets/All Images/Vector.png";
+import Banner1 from "../../../public/assets/All Images/Vector-1.png";
+import Banner from "../../../public/assets/All Images/Vector.png";
 
 const Blog = () => {
     return (

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import "./JobDetails.css"
 import { useLoaderData, useParams } from 'react-router-dom';
 import { CurrencyDollarIcon, MapPinIcon, PhoneIcon, EnvelopeIcon, BriefcaseIcon } from '@heroicons/react/24/solid'
-import Banner1 from "../../assets/All Images/Vector-1.png"
-import Banner from "../../assets/All Images/Vector.png"
+import Banner1 from "../../../public/assets/All Images/Vector-1.png";
+import Banner from "../../../public/assets/All Images/Vector.png";
 
 
 const JobDetails = () => {
@@ -21,7 +21,7 @@ const JobDetails = () => {
     const handleApplied = (data) => {
         const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
         // Check if the job already exists in localStorage
-        const jobExists = jobs.some((job) => job.id === data.id);np
+        const jobExists = jobs.some((job) => job.id === data.id);
         if (!jobExists) {
             jobs.push(data);
             localStorage.setItem("jobs", JSON.stringify(jobs));

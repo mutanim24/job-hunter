@@ -18,7 +18,7 @@ const JobFeature = ({ feature, handleViewDetails }) => {
                 <p><MapPinIcon className="h-6 w-6 text-cyan-600 inline-flex" /> {location}</p>
                 <p><span><CurrencyDollarIcon className="h-6 w-6 text-cyan-600 inline-flex" /> Salary: {salary}</span></p>
             </div>
-            <Link to={`jobdetails/${id}`}><button className='bg-cyan-600 text-white p-1 px-3 rounded'>View Details</button></Link>
+            <Link to={`/jobdetails/${id}`}><button className='bg-cyan-600 text-white p-1 px-3 rounded'>View Details</button></Link>
         </div>
     );
 };

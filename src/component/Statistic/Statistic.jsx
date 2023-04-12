@@ -1,8 +1,8 @@
 // import React from 'react';
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import Banner1 from "../../assets/All Images/Vector-1.png";
-import Banner from "../../assets/All Images/Vector.png";
+import Banner1 from "../../../public/assets/All Images/Vector-1.png";
+import Banner from "../../../public/assets/All Images/Vector.png";
 
 const Statistic = () => {
     const marks = [
