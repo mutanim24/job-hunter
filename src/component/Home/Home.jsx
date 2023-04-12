@@ -5,7 +5,7 @@ import JobFeature from '../JobFeature/JobFeature';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
-    const [jobFeatures, setJobFeatures] = useState([])
+    const [jobFeatures, setJobFeatures] = useState([]);
     const [seeAllJob, setSeeAllJob] = useState(false);
 
     const handleViewDetails = (id) => {

@@ -13,6 +13,7 @@ import Blog from './component/Blog/Blog';
 import AppliedJob from './component/AppliedJob/AppliedJob';
 import JobDetails from './component/JobDetails/JobDetails';
 import FourZero from './component/FourZero/FourZero';
+import loadApplied from './component/LoadData/loadData';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/applied",
-        element: <AppliedJob></AppliedJob>
+        element: <AppliedJob></AppliedJob>,
+        loader: loadApplied,
       },
       {
         path: "/blog",

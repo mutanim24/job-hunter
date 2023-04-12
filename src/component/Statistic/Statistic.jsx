@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Statistic = () => {
     const marks = [
@@ -12,13 +12,19 @@ const Statistic = () => {
         { assignment: "ass-6", mark: 60 }
     ];
     return (
-        <div>
-            <PieChart width={800} height={400}>
-                <Pie data={marks} dataKey="mark" fill="#8884d8" />
-                <Tooltip ></Tooltip>
-                <Sector></Sector>
-                {/* <Pie data={marks} dataKey="assignment" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label /> */}
-            </PieChart>
+        <div className='my-20'>
+            <AreaChart
+                width={1000}
+                height={300}
+                data={marks}
+               
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="assignment" />
+                <YAxis />
+                <Tooltip />
+                <Area type="monotone" dataKey="mark" stroke="#00ACC1," fill="#00ACC1," />
+            </AreaChart>
         </div>
     );
 };
